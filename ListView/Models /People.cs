@@ -1,30 +1,30 @@
 ﻿using System;
+using Xamarin.Forms;
+namespace ListViewHw.Models
 
 {
     public class People
-{
-    public string Name
     {
-        get;
-        set;
-    }
+        public string Name
+        {
+            get;
+            set;
+        }
+        public Uri Pics
+        {
+            get;
+            set;
+        }
+        public string WebsiteName
+        {
+            get;
+            set;
+        }
 
-    public string GradeLevel
-    {
-        get;
-        set;
+        public string Url
+        {
+            get;
+            set;
+        }
     }
-
-    public double Gpa
-    {
-        get;
-        set;
-    }
-
-    public string FavoriteHobby
-    {
-        get;
-        set;
-    }
-}
 }

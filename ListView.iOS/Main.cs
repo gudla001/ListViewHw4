@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace ListView.iOS
+namespace ListViewHw.iOS
 {
     public class Application
     {

@@ -157,4 +157,8 @@
       <Name>ListView</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Properties\Messi.png" />
+    <BundleResource Include="Resources\Messi.png" />
+  </ItemGroup>
 </Project>
