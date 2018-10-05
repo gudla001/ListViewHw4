@@ -4,21 +4,30 @@
     
 <ContentPage.Content>
         <ListView
-            x:Name="CListViewCells"
-            ItemTapped="Handle_ItemTapped">
+            x:Name="CListViewCells" ItemsSource="{Binding People}" IsPullToRefreshEnabled="true" Refreshing="Handle_Refreshing"
+            >
             
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell >
+                            <ViewCell.ContextActions>
+                            <MenuItem
+                                    Text="Info"
+                                Clicked="HandleInfoClicked"
+                                CommandParameter="{Binding .}"/>
+                            <MenuItem 
+                                     Clicked="OnDelete" CommandParameter="{Binding .}"
+               Text="Delete" IsDestructive="True" />
+                        </ViewCell.ContextActions>
                         <ViewCell.View>
                             <StackLayout
                                 Orientation="Horizontal">
                                 <Label
-                                    Text="{Binding Name}"/>
+                                    Text="{Binding Name}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
                                 
                                 
                                 
-                                <Image VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand">
+                                <Image VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                                     <Image.Source>
                                         <UriImageSource Uri="{Binding Pics}"  />
                                     </Image.Source>

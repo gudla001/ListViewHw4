@@ -26,5 +26,11 @@ namespace ListViewHw.Models
             get;
             set;
         }
+        public string PlayerData
+        {
+            get;
+            set;
+        }
+        
     }
 }

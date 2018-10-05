@@ -7,6 +7,8 @@ namespace ListViewHw
 {
     public partial class App : Application
     {
+        public static object Database { get; internal set; }
+
         public App()
         {
             InitializeComponent();
